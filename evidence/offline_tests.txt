@@ -1,0 +1,15 @@
+test_8_second_gate_and_absence (__main__.HTTPTests.test_8_second_gate_and_absence) ... ok
+test_busy_robot_skips (__main__.HTTPTests.test_busy_robot_skips) ... ok
+test_cli_play_once_observes_same_id (__main__.HTTPTests.test_cli_play_once_observes_same_id) ... ok
+test_closed_job_cannot_start (__main__.HTTPTests.test_closed_job_cannot_start) ... ok
+test_duplicate_names_refused (__main__.HTTPTests.test_duplicate_names_refused) ... ok
+test_lost_post_response_never_retries_blindly (__main__.HTTPTests.test_lost_post_response_never_retries_blindly) ... ok
+test_missing_status_skips (__main__.HTTPTests.test_missing_status_skips) ... ok
+test_name_resolves_to_file_id_and_one_post (__main__.HTTPTests.test_name_resolves_to_file_id_and_one_post) ... ok
+test_network_failure_recovers_on_next_opportunity (__main__.HTTPTests.test_network_failure_recovers_on_next_opportunity) ... ok
+test_person_lost_while_checking (__main__.HTTPTests.test_person_lost_while_checking) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.271s
+
+OK

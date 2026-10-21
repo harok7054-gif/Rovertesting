@@ -1,0 +1,41 @@
+{
+  "capture": "PCAPdroid_20_10월_16_45_07.pcap",
+  "capture_date_local": "2026-10-20",
+  "timezone": "Asia/Seoul",
+  "robot_service": "http://192.168.1.6:22000",
+  "upload": {
+    "method": "POST",
+    "path": "/upload/formdata/audio",
+    "fields": ["name", "type", "time", "file"],
+    "name": "greeting_original",
+    "file_name": "greeting_original.mp3",
+    "http_status": 200,
+    "response": {"taskId": "<UPLOAD_TASK_ID>", "status": true}
+  },
+  "task": {
+    "method": "GET",
+    "path": "/settings/voice/taskid?taskId=<UPLOAD_TASK_ID>",
+    "response": {
+      "taskStatus": 2, "taskCode": 0,
+      "taskResult": "Task done", "taskError": ""
+    }
+  },
+  "registered_item": {
+    "name": "greeting_original",
+    "id": "<VOICE_ID>",
+    "originType": "mp3",
+    "saveFile": "/userdata/dobot/conf/project/voice/file/save_<VOICE_ID>"
+  },
+  "play": {
+    "method": "POST",
+    "path": "/settings/voice/play",
+    "request": {"id": "<VOICE_ID>"},
+    "response": {"status": true}
+  },
+  "status_observations": [
+    {"audio": {"isPlay": true, "type": 3, "id": "<VOICE_ID>"}},
+    {"audio": {"isPlay": true, "type": 3, "id": "<VOICE_ID>"}}
+  ],
+  "interpretation": "Same registered voice ID observed playing. This record does not verify wolf.mp3 or acoustic output.",
+  "redactions": "Exact task and voice IDs replaced with distinct placeholders. Raw capture is not included."
+}

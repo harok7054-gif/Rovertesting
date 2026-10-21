@@ -1,0 +1,38 @@
+[
+  {
+    "file": "examples/audio_receiver/receiver.py",
+    "sha256": "b6851d623dd9612519e08a15469a781403feee5d6763c662dd7487d3c3e23db2",
+    "source": "receiver.py",
+    "preserved": true
+  },
+  {
+    "file": "examples/dds_audio_send/voice_send_v2.py",
+    "sha256": "bd182aae23a2b0611b357f4c48506b4d94c00abad2502cd28b1693874df3abcc",
+    "source": "voice_send_v2.py",
+    "preserved": true
+  },
+  {
+    "file": "examples/greeting_http/person_greet_http_v4.py",
+    "sha256": "2c301e338b10d6aafddb84774e0f90ee2108b2862099e026da6d2734bf5f1273",
+    "source": "person_greet_http_v4.py",
+    "preserved": true
+  },
+  {
+    "file": "examples/greeting_http/rover_http_voice.py",
+    "sha256": "656d0ccdfd6b2dd4f0bc9975c439e220646ae402040383a6b8a1528d954164c0",
+    "source": "rover_http_voice.py",
+    "preserved": true
+  },
+  {
+    "file": "examples/greeting_http/test_http_voice.py",
+    "sha256": "75a62a5980a0ff1b39d999da260f07f7aa0f27f8d03e22ea4017d6ef53eb2627",
+    "source": "test_http_voice.py",
+    "preserved": true
+  },
+  {
+    "file": "examples/greeting_http/run_rover_greeting_http_v4.py",
+    "sha256": "43f03ca47a23cd11d61e79a429bbb828a5f3c7d5a7c778257501ec55c464bfbc",
+    "source": "run_rover_greeting_http_v4.py",
+    "preserved": true
+  }
+]

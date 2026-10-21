@@ -1,0 +1,15 @@
+{
+  "source": "rover_wifi_audio_probe_20261020_160023_791970.json",
+  "time_utc": "2026-10-20T07:00:23.792001+00:00",
+  "address": "192.168.1.6:50051",
+  "state": {
+    "success": true,
+    "current_state": "WALK",
+    "current_speed_ratio": 30,
+    "obstacle_avoidance_enabled": true,
+    "robot_type": "miniQuad"
+  },
+  "motion_count": 27,
+  "motions_success": true,
+  "note": "State and motion availability query only; no audio playback or walking execution inferred."
+}

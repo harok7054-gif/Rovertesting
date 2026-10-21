@@ -1,0 +1,14 @@
+{
+  "messages": 150,
+  "source_0": 150,
+  "saved_packets": 150,
+  "reason": "duration_complete",
+  "pcm_bytes": 480000,
+  "audio_seconds": 15.0,
+  "sample_rate": 16000,
+  "channels": 1,
+  "sample_width_bytes": 2,
+  "encoding": "signed PCM little endian",
+  "arrival_span_seconds": 14.900483969999186,
+  "note": "Received chunks concatenated; gaps are not filled. Timestamp warnings are not packet-loss measurements."
+}
