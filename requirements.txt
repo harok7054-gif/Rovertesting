@@ -1,0 +1,5 @@
+# Vision environment only. Install CPU PyTorch first (see scripts/setup_ubuntu.sh).
+# Compatible ranges, not a fully locked or robot-qualified environment.
+ultralytics>=8.3,<9
+opencv-python>=4.10,<5
+numpy>=1.26,<3

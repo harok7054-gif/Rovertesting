@@ -1,5 +1,28 @@
 # DOBOT Rover 통신과 시각 음성 통합
 
+## 새 PC에서 시작하기 (2026-10-21 추가)
+
+**Clone만으로 바로 실행되지는 않습니다.** Ubuntu 22.04 x86_64 / Python 3.10 기준의 설치 스크립트, 환경별 requirements, 모델 다운로드와 오프라인 점검을 추가했습니다.
+
+[빈 환경 설치 및 실행 안내](docs/10-fresh-install.md)에서 OS 준비 → 설치 → 로버 연결 → 음성 업로드 → 단독 재생 → 사람 인식 순서로 진행합니다.
+
+~~~bash
+# 이미 저장소를 받은 Ubuntu 22.04 PC에서, 저장소 루트 실행
+bash scripts/setup_ubuntu.sh
+# 설치 완료 후 로버 Wi-Fi 연결
+python3 tools/upload_voice.py --file assets/audio/greeting_demo_en.mp3 --name greeting_demo_en
+python3 examples/greeting_http/rover_http_voice.py play-once --voice-name greeting_demo_en
+bash scripts/run_greeting.sh --detect-only
+# 위 시험을 종료한 뒤
+bash scripts/run_greeting.sh --voice-name greeting_demo_en
+~~~
+
+- 의존성: [requirements.txt](requirements.txt), [CPU](requirements/cpu.txt), [카메라 SDK](requirements/camera.txt), [선택 기능: DDS 마이크](requirements/microphone.txt)
+- 실행용 음성: [greeting_demo_en.mp3](assets/audio/greeting_demo_en.mp3) — 새 영어 합성 예제. 기존 실험 인사말 원본은 아닙니다.
+- 신규 설치 경로는 저장소 내부의 `.venv-camera`, `.venv-vision`, `models/`이며, 아래의 **기존 성공 환경** 명령과 구분합니다.
+- 29쪽 Word는 기존 실습 정리본이며 신규 설치 보완은 위 안내 문서에서 관리합니다.
+
+
 Ubuntu 개발 PC에서 DOBOT Rover의 **DDS 상태 수신, gRPC 고수준 제어, RTSP 카메라, HTTP 음성 업로드와 재생, YOLO 사람 검출**을 연결한 실습 기록과 실행 안내서다.
 
 실기 확인 결과, 패킷 분석 결과, 코드 구현 및 로컬 시험을 구분하여 재현할 수 있도록 정리했다. 사용자 보고에 따른 통합 시험의 성과는 사람을 검출하고 로버 스피커로 인사하는 인지와 행동의 연결이다. 현재 코드는 규칙 기반이며, 언어 지시를 해석하는 학습형 VLA 정책은 별도 연구 단계다.

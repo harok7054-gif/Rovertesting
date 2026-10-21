@@ -19,3 +19,7 @@ recordings/
 private/
 upload_response.json
 *_private.json
+.deps/
+models/
+environment/
+!assets/audio/greeting_demo_en.mp3

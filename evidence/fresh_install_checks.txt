@@ -1,0 +1,15 @@
+2026-10-21 packaging validation (not robot hardware validation)
+
+bash -n scripts/setup_ubuntu.sh scripts/check_environment.sh scripts/run_greeting.sh: PASS
+python3 tools/test_upload_voice.py: 3 tests PASS
+python3 examples/greeting_http/test_http_voice.py: 10 tests PASS
+python3 -m py_compile tools/upload_voice.py tools/test_upload_voice.py: PASS
+ffmpeg decode assets/audio/greeting_demo_en.mp3 to null: PASS
+ffprobe: MP3, 24000 Hz, mono, container duration 3.288 seconds
+
+Not run in this environment:
+- Full apt/pip bootstrap on a clean Ubuntu 22.04 x86_64 host
+- New SDK + model end-to-end host check following that installation
+- Live robot upload, acoustic playback and camera/YOLO integration
+
+The supplied synthetic English audio is a new demo asset, not the historical greeting recording.

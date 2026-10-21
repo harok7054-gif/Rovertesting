@@ -1,0 +1,2 @@
+# Optional, separate DDS microphone environment; not needed by HTTP greeting.
+cyclonedds==0.10.5

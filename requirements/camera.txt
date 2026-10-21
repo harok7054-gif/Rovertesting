@@ -1,0 +1,3 @@
+# Run pip from the repository root after setup has cloned the pinned SDK.
+# SDK pyproject supplies grpcio, grpcio-tools and protobuf dependencies.
+./.deps/dobot_quad_sdk/high_level/python
